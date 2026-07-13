@@ -81,7 +81,7 @@ export default function HomePage() {
         >
           <source src="/videos/hero.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/50 to-ink/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-ink/80 via-ink/65 to-ink/85" />
 
         <div className="relative mx-auto max-w-5xl px-6 py-28 text-center">
           <SectionReveal>
@@ -90,14 +90,14 @@ export default function HomePage() {
             </span>
           </SectionReveal>
           <SectionReveal delay={0.08}>
-            <h1 className="mt-8 text-balance font-display text-5xl leading-[1.05] tracking-tight text-ivory sm:text-7xl">
+            <h1 className="mt-8 text-balance font-display text-5xl leading-[1.05] tracking-tight text-ivory drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)] sm:text-7xl">
               Bangladesh&rsquo;s most exclusive
               <br />
               home for pet care.
             </h1>
           </SectionReveal>
           <SectionReveal delay={0.16}>
-            <p className="mx-auto mt-6 max-w-xl text-balance text-lg text-ivory/70">
+            <p className="mx-auto mt-6 max-w-xl text-balance text-lg text-ivory/90 drop-shadow-[0_1px_8px_rgba(0,0,0,0.4)]">
               {BRAND.name} connects owners with rigorously verified sellers, foster
               homes, vets, groomers and trainers — nothing goes live until our team
               confirms it.
@@ -107,7 +107,10 @@ export default function HomePage() {
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link
                 href="/marketplace/dog"
-                className={cn(buttonVariants({ size: "lg" }), "rounded-full px-8")}
+                className={cn(
+                  buttonVariants({ size: "lg" }),
+                  "btn-shine rounded-full bg-gold px-8 text-ink hover:bg-gold-soft"
+                )}
               >
                 Explore the marketplace <ArrowRight className="ml-1 h-4 w-4" />
               </Link>
@@ -115,7 +118,7 @@ export default function HomePage() {
                 href="/become-a-provider"
                 className={cn(
                   buttonVariants({ variant: "outline", size: "lg" }),
-                  "rounded-full border-ivory/30 bg-transparent px-8 text-ivory hover:bg-white/10"
+                  "btn-shine rounded-full border-ivory/30 bg-transparent px-8 text-ivory hover:bg-white/10"
                 )}
               >
                 Become a provider
@@ -153,6 +156,10 @@ export default function HomePage() {
             <h2 className="mt-3 font-display text-3xl text-ink sm:text-4xl">
               Curated for every companion.
             </h2>
+            <p className="mt-3 max-w-xl text-ink/60">
+              Whatever you share your home with, we&rsquo;ve got the food, gear
+              and care to match.
+            </p>
           </SectionReveal>
           <div className="mt-10 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
             {speciesCards.map((s, i) => (
@@ -182,12 +189,12 @@ export default function HomePage() {
           </div>
 
           <SectionReveal delay={0.2}>
-            <div className="mt-8 flex flex-wrap gap-2">
+            <div className="mt-8 flex flex-wrap items-center gap-2.5">
               {CATEGORIES.map((c) => (
                 <Link
                   key={c.slug}
                   href={`/marketplace/dog/${c.slug}`}
-                  className="rounded-full border border-border bg-card px-4 py-2 text-sm text-ink/70 transition-colors hover:border-emerald hover:text-emerald"
+                  className="whitespace-nowrap rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-ink/70 transition-colors hover:border-emerald hover:text-emerald"
                 >
                   {c.label}
                 </Link>
