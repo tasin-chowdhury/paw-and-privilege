@@ -109,7 +109,7 @@ export default function HomePage() {
                 href="/marketplace/dog"
                 className={cn(
                   buttonVariants({ size: "lg" }),
-                  "btn-shine rounded-full bg-gold px-8 text-ink hover:bg-gold-soft"
+                  "rounded-full bg-gold px-8 text-ink hover:bg-gold-soft"
                 )}
               >
                 Explore the marketplace <ArrowRight className="ml-1 h-4 w-4" />
@@ -118,7 +118,7 @@ export default function HomePage() {
                 href="/become-a-provider"
                 className={cn(
                   buttonVariants({ variant: "outline", size: "lg" }),
-                  "btn-shine rounded-full border-ivory/30 bg-transparent px-8 text-ivory hover:bg-white/10"
+                  "rounded-full border-ivory/30 bg-transparent px-8 text-ivory hover:bg-white/10"
                 )}
               >
                 Become a provider
